@@ -36,13 +36,21 @@ I decided a bug was really fixed by testing the exact failure mode and confirmin
 
 ## 4. What did you learn about Streamlit and state?
 
+I learned that Stremlit reruns the whole script from the top to bottom on every single interaction that happenes, so that any non-session variable is reset unless it is saved. Session state acts like persistent memory for the interactive app. lost between reruns.
+
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 
----
+Streamlit reruns are like re-running the app code on each user action, a state is a dictionary where we keep values so they don’t get 
 
 ## 5. Looking ahead: your developer habits
 
+One habit I want to reuse is writing small regression tests for each bug and running `pytest` after each fix so I can objectively verify behavior. I also want to keep the prompting strategy of asking the AI for exact broken line locations and then confirming with tests.
+
+Next time with AI I would do more frequent manual verification early to catch misleading suggestions sooner, and then fix with tests immediately. This project showed me that AI-generated code can accelerate development, but I still need to validate and correct it carefully as a responsible developer.
+
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
+
+A habbit I want to reuse in the future would be writing focused tests and using AI suggestions as a starting point, not a final solution. This project changed the way I think about AI generated code throough understanding that AI might not use the best way to write the code, it could have a extra 100 lines that are completely unnecessary and its my job to understand the edits it gives me to know if all the edits it is giving me is necessary.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.

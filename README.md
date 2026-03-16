@@ -25,13 +25,13 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [ ] Describe the game's purpose. - A number-guessing game where the player guesses a secret number within a difficulty-specific range and receives higher/lower hints.
+- [ ] Detail which bugs you found. - Hints were reversed, hard difficulty range was smaller than normal, out-of-range input was accepted, and attempts incremented even for invalid input.
+- [ ] Explain what fixes you applied. - Refactored game logic into `logic_utils.py`, fixed the hard range to increase difficulty, corrected hint direction messaging, added range validation, and only counted attempts for valid guesses.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- [![alt text](image.png) ] [Insert a screenshot of your fixed, winning game here]
 
 ## 🚀 Stretch Features
 
